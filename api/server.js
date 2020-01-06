@@ -11,4 +11,8 @@ server.use(express.json());
 
 server.use("/api/auth", authRouter);
 
+server.get("/", (req, res) => {
+  res.send("Welcome to the backend of Spotify Song Suggester!");
+});
+
 module.exports = server;
