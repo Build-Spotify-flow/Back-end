@@ -20,7 +20,18 @@ This is the home for documentation of the backend for the Spotify Song Suggester
 
 ## - Authorizing an existing user
 
-| Header | Header2 | Header 3 |
-| ------ | ------- | -------- |
-| Thing  | Thing 2 | Thing 5  |
-| Thing3 | Thing 4 | Thing 6  |
+| Field    | Type   | Description                   |
+| -------- | ------ | ----------------------------- |
+| username | String | Username for the created user |
+| password | String | Password for the created user |
+
+    Request Example:
+
+    {
+        username: "paulgeorge13",
+        password: "laClippers"
+    }
+
+# Saving Songs
+
+## -
