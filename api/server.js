@@ -12,4 +12,8 @@ server.use("/api/auth", authRouter);
 server.use(authenticate)
 server.use("/api/track", trackRouter);
 
+server.get("/", (req, res) => {
+  res.send("Welcome to the backend of Spotify Song Suggester!");
+});
+
 module.exports = server;

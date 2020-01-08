@@ -1,2 +1,6 @@
+
+npm-debug.log
+.DS_Store
+.env
 node_modules
 data/auth.db3
