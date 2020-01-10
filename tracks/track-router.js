@@ -10,7 +10,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
   console.log('h0')
   users.findBy({username: req.token.username}).then(user => {
-    console.log('h1')
+    console.log('h1', user)
     const id = user[0].id;
     model.findLiked(id).then(liked => {
       console.log('h2')
