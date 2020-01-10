@@ -1,7 +1,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable("likedSongs", track => {
     track.increments();
-    track.integer("trackid").notNullable();
+    track.string("trackid").notNullable();
     track.integer("usersid").references('id').inTable('users').notNullable().onDelete('cascade');
   });
 };

@@ -2,6 +2,11 @@ const router = require('express').Router();
 const model = require('./tracks-model');
 const users = require('../users/users-model')
 
+router.post('/', (req, res) => {
+  model.allLiked().then(info => {
+    res.status(200).send(info)
+  })
+})
 router.get('/', (req, res) => {
   users.findBy({username: req.token.username}).then(user => {
     const id = user[0].id;

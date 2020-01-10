@@ -6,9 +6,12 @@ module.exports = {
   removeLike,
   removeDislike,
   findLiked,
-  findDisliked
+  findDisliked,
+  allLiked
 };
-
+function allLiked() {
+  return db('likedSongs')
+}
 function findLiked(usersid) {
   return db('likedSongs').where({usersid});
 }
