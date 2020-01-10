@@ -2,7 +2,7 @@ exports.up = function(knex) {
   return knex.schema.createTable("dislikedSongs", users => {
     users.increments();
     users.string("trackID").notNullable();
-    users.string("usersID").notNullable().references('id').inTable('users');
+    users.integer("usersID").notNullable().references('id').inTable('users');
   });
 };
 
