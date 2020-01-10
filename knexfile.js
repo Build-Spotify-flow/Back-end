@@ -47,7 +47,7 @@ module.exports = {
   production: {
     client: "sqlite3",
     connection: {
-      filename: "./data/auth.db3"
+      filename: "process.env.DATABASE_URL"
     },
     pool: {
       min: 2,
