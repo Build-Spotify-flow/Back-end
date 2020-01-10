@@ -45,8 +45,10 @@ module.exports = {
   },
 
   production: {
-    client: "pg",
-    connection: process.env.DATABASE_URL,
+    client: "sqlite3",
+    connection: {
+      filename: "./data/auth.db3"
+    },
     pool: {
       min: 2,
       max: 10
@@ -54,6 +56,7 @@ module.exports = {
     migrations: {
       directory: "./data/migrations"
     },
+    useNullAsDefault: true,
     seeds: { directory: "./data/seeds" }
   }
 };
