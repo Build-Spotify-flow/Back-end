@@ -8,10 +8,14 @@ router.post('/', (req, res) => {
   })
 })
 router.get('/', (req, res) => {
+  console.log('h0')
   users.findBy({username: req.token.username}).then(user => {
+    console.log('h1')
     const id = user[0].id;
     model.findLiked(id).then(liked => {
+      console.log('h2')
       model.findDisliked(id).then(disliked => {
+        console.log('h3')
         res.status(200).send({liked, disliked});
       });
     });
