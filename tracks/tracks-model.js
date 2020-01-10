@@ -13,7 +13,7 @@ function allLiked() {
   return db('likedSongs')
 }
 function findLiked(usersid) {
-  return db('likedSongs').where({usersid});
+  return db('likedSongs');
 }
 function findDisliked(usersid) {
   return db('dislikedSongs').where({usersid});
