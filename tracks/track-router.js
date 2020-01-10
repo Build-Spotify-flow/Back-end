@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     console.log('h1', user)
     const id = user[0].id;
     model.findLiked(id).then(liked => {
-      console.log('h2')
+      console.log('h2', liked)
       model.findDisliked(id).then(disliked => {
         console.log('h3')
         res.status(200).send({liked, disliked});
